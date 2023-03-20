@@ -1,5 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { deleteContacts } from '../../redux/contactsSlice'
 
 const Item = ({contact}) => {
@@ -15,8 +16,9 @@ const Item = ({contact}) => {
   return (
     <div>
       {contact.name}
-      {contact.phone_number}
+      {contact.number}
       <button onClick={() => handleDelete(contact.id)}>x</button>
+      <Link to={`/edit/${contact.id}`}>Edit</Link>
     </div>
   )
 }

@@ -7,16 +7,17 @@ const List = () => {
   const dispatch = useDispatch();
 
   const contacts = useSelector(contactSelectors.selectAll);
+  const total = useSelector(contactSelectors.selectTotal);
 
   const handleDeleteAll = () => {
-    if(window.confirm("are you sure?")){
-      dispatch(removeAllContacts())
+    if (window.confirm("are you sure?")) {
+      dispatch(removeAllContacts());
     }
-  }
+  };
 
   return (
     <div>
-      <button onClick={handleDeleteAll}>Delete All</button>
+      {total > 0 && <button onClick={handleDeleteAll}>Delete All</button>}
       {contacts.map((contact) => (
         <Item key={contact.id} contact={contact} />
       ))}

@@ -15,7 +15,7 @@ const Form = () => {
 
     // const names = name.split(',');
 
-    dispatch(addContact({ id:nanoid(), name, phone_number:number }))
+    dispatch(addContact({ id:nanoid(), name, number:number }))
     // const data = names.map((name) =>({ id:nanoid(), name }))
     // dispatch(addContacts(data))
 
