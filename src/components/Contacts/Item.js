@@ -4,6 +4,7 @@ const Item = ({contact}) => {
   return (
     <div>
       {contact.name}
+      {contact.phone_number}
     </div>
   )
 }
