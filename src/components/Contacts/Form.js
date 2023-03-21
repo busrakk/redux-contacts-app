@@ -6,39 +6,65 @@ import { addContact } from "../../redux/contactsSlice";
 const Form = () => {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
-  const  dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if(!name || !number) return false;
+    if (!name || !number) return false;
 
     // const names = name.split(',');
 
-    dispatch(addContact({ id:nanoid(), name, number:number }))
+    dispatch(addContact({ id: nanoid(), name, number: number }));
     // const data = names.map((name) =>({ id:nanoid(), name }))
     // dispatch(addContacts(data))
 
-    setName('')
-    setNumber('')
-  }
+    setName("");
+    setNumber("");
+  };
 
   return (
-    <div>
+    <>
       <form onSubmit={handleSubmit}>
-        <input 
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="name"
-        />
-        <input 
-          value={number}
-          onChange={(e) => setNumber(e.target.value)}
-          placeholder="phone number"
-        />
-        <button type="submit">Add</button>
+        <div class="mb-3">
+          <label
+            for="name"
+            class="mb-3 block text-sm font-medium text-[#07074D]"
+          >
+            Full Name
+          </label>
+          <input
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-sm font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+          />
+        </div>
+        <div class="mb-3">
+          <label
+            for="email"
+            class="mb-3 block text-sm font-medium text-[#07074D]"
+          >
+            Telephone Number
+          </label>
+          <input
+            value={number}
+            onChange={(e) => setNumber(e.target.value)}
+            type="number"
+            name="number"
+            placeholder="Telephone Number"
+            class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-sm font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+          />
+        </div>
+        <div>
+          <button class="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-4 text-sm font-semibold text-white outline-none">
+            Submit
+          </button>
+        </div>
       </form>
-    </div>
+    </>
   );
 };
 
