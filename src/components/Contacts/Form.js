@@ -26,10 +26,10 @@ const Form = () => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <div class="mb-3">
+        <div className="mb-3">
           <label
             for="name"
-            class="mb-3 block text-sm font-medium text-[#07074D]"
+            className="mb-3 block text-sm font-medium text-[#07074D]"
           >
             Full Name
           </label>
@@ -39,13 +39,13 @@ const Form = () => {
             type="text"
             name="name"
             placeholder="Full Name"
-            class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-sm font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+            className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-sm font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
           />
         </div>
-        <div class="mb-3">
+        <div className="mb-3">
           <label
             for="email"
-            class="mb-3 block text-sm font-medium text-[#07074D]"
+            className="mb-3 block text-sm font-medium text-[#07074D]"
           >
             Telephone Number
           </label>
@@ -55,11 +55,11 @@ const Form = () => {
             type="number"
             name="number"
             placeholder="Telephone Number"
-            class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-sm font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+            className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-sm font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
           />
         </div>
         <div>
-          <button class="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-4 text-sm font-semibold text-white outline-none">
+          <button className="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-4 text-sm font-semibold text-white outline-none">
             Submit
           </button>
         </div>

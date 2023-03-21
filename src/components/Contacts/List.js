@@ -33,22 +33,22 @@ const List = () => {
 
   return (
     <div className="w-full">
-        <div class="flex justify-end">
+        <div className="flex justify-end">
           <div>
-            {total > 0 && <button class="py-3 px-4 flex items-center text-sm font-medium leading-none text-white bg-red-500 hover:bg-red-700 cursor-pointer rounded" onClick={handleDeleteAll}>Delete All</button>}
+            {total > 0 && <button className="py-3 px-4 flex items-center text-sm font-medium leading-none text-white bg-red-500 hover:bg-red-700 cursor-pointer rounded" onClick={handleDeleteAll}>Delete All</button>}
           </div>
       </div>
 
       {total > 0 && 
-      <div class="flex items-center justify-center font-sans overflow-hidden">
-        <div class="w-full">
-          <div class="bg-white shadow-md rounded my-6">
-            <table class="min-w-max w-full table-auto">
+      <div className="flex items-center justify-center font-sans overflow-hidden">
+        <div className="w-full">
+          <div className="bg-white shadow-md rounded my-6">
+            <table className="min-w-max w-full table-auto">
               <thead>
-                <tr class="bg-gray-100 text-gray-600 uppercase text-sm leading-normal">
-                  <th class="py-3 px-6 text-left">Name</th>
-                  <th class="py-3 px-6 text-left">Phone Number</th>
-                  <th class="py-3 px-6 text-center">Actions</th>
+                <tr className="bg-gray-100 text-gray-600 uppercase text-sm leading-normal">
+                  <th className="py-3 px-6 text-left">Name</th>
+                  <th className="py-3 px-6 text-left">Phone Number</th>
+                  <th className="py-3 px-6 text-center">Actions</th>
                 </tr>
               </thead>
               {contacts.map((contact) => (

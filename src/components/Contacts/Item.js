@@ -32,23 +32,23 @@ const Item = ({ contact }) => {
   };
 
   return (
-    <tbody class="text-gray-600 text-sm font-light">
-      <tr class="border-b border-gray-200 hover:bg-gray-100">
-        <td class="py-3 px-6 text-left whitespace-nowrap">
-          <span class="font-medium">{contact.name}</span>
+    <tbody className="text-gray-600 text-sm font-light">
+      <tr className="border-b border-gray-200 hover:bg-gray-100">
+        <td className="py-3 px-6 text-left whitespace-nowrap">
+          <span className="font-medium">{contact.name}</span>
         </td>
-        <td class="py-3 px-6 text-left whitespace-nowrap">
-          <span class="font-medium">{contact.number}</span>
+        <td className="py-3 px-6 text-left whitespace-nowrap">
+          <span className="font-medium">{contact.number}</span>
         </td>
-        <td class="py-3 px-6 text-center">
-          <div class="flex item-center justify-center">
+        <td className="py-3 px-6 text-center">
+          <div className="flex item-center justify-center">
             <Link to={`/edit/${contact.id}`}>
-              <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
+              <div className="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
                 <HiOutlinePencil size={20} />
               </div>
             </Link>
             <button onClick={() => handleDelete(contact.id)}>
-              <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
+              <div className="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
                 <RiDeleteBinLine size={20} />
               </div>
             </button>
